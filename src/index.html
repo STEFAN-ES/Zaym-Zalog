@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="keywords" >
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel='stylesheet' href='css/fonts.css'>
   <link rel='stylesheet' href='css/style.css'>
   <title>ЗаймЗалог - получите деньги быстро</title>
@@ -79,9 +80,37 @@
       </div>
       <!-- ./Main-text-END -->
 
-      .main
+      <div class="main-form">
+        <div class="main-form__wrap">
+          
+          <div class="main-form__text">
+            <div class="main-form__text-title">Заполните форму</div>
+            <div class="main-form__text-subtitle">и получите решение по займу в течении 15 минут</div>
+          </div>
+          <!-- ===Main-form__text END=== -->
+          <form action="#" class="form" method="POST">
+            <input type="text" name="user_name" class="main-form__input input-text" placeholder="Ваше имя"
+                required>
+            <input type="text" name="user_phone" class="main-form__input input-text" placeholder="Ваш телефон"
+                required>
+            <div class="form-radio">
+              <label for="avansHours">
+                <input type="radio" name="user_variant" id="avansHours" value="avans" checked><span class="btn-left">Нужен аванс в течении часа</span>
+              </label>
+              
+              <label for="amountToday">
+                <input type="radio" name="user_variant" id="amountToday" value="summa"><span class="btn-right">Нужна вся сумма сегодня</span>
+              </label>
+            </div>
+            <button type="submit" class="form-btn main-form__btn">Получить решение</button>
+            
+          </form>
+          <div class="main-form__descr">Отправляя запрос, вы даете согласие на <a href="#" class="main-form__descr-link">обработку Ваших персональных данных</a></div>
+        </div>
+      </div>
+      <!-- ====MAIN FORM END===== -->
     </div>
-
+    <!-- ======MAIN END======= -->
     </div>
     <!-- /.container -->
   </div>

@@ -29,3 +29,65 @@
         &_text
           font-size: 18px
           width: 255px
+    
+  &-form
+    padding: 10px
+    background: #ffffff
+    &__wrap
+      padding: 30px 40px
+      border: 2px solid #fafbfc
+      border-radius: 4px
+      /* background-color: #f9f9f9 */
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__text
+      text-align: center
+      width: 215px
+      margin-bottom: 28px
+      &-title
+        font-size: 24px
+        font-weight: 700
+      &-subtitle
+        font-size: 15px
+        font-weight: 300
+    &__btn
+      margin-bottom: 25px
+    &__descr
+      width: 220px
+      color: #8090a7
+      font-size: 10px
+      font-weight: 300
+      &-link
+        color: #2066da
+        text-decoration: underline
+    .form
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 285px
+      &-radio
+        margin-bottom: 30px
+        span
+          display: inline-block
+          padding: 14px 25px
+          width: 140px
+          background: #f8f8f8
+          border: 1px solid #e4e7ea
+          font-size: 12px
+          font-weight: 300
+          position: relative
+          cursor: pointer
+          &.btn-left
+            border-radius: 5px 0 0 5px
+            left: 2px
+          &.btn-right
+            border-radius: 0 5px 5px 0
+            right: 2px
+        input[type="radio"]
+          display: none
+        input[type="radio"]:checked + span
+          box-shadow: 0 1px 0 #e9aa01, inset 1px 1px 0 rgba(255, 255, 255, 0.09)   
+          background: linear-gradient(to top, #f6bb00 0%, #ffcc38 49%, #ffda6c 100%)
+          border: 1px solid #f6bb00
+
