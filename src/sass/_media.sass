@@ -1,10 +1,95 @@
 @media (max-width: 991px)
   .header
     &-top
+      &__contacts
+        &-time
+          margin-right: 40px
+    
+  .main
+    h1
+      font-size: 50px
+    &-text
+      &__subtitle
+        font-size: 30px
+    &-form
+      &__wrap
+        padding: 25px 20px
+      &__input
+        margin-bottom: 15px
+        padding: 15px 20px
+      &__btn
+        margin-bottom: 20px
+    
+    .form
+      width: 250px
+      &-radio
+        margin-bottom: 20px
+        span
+          width: 49%
+          padding: 10px 15px
+      &-btn
+        padding: 15px 50px
+
+@media (max-width: 767px)
+  .hidden-mobile
+    display: none
+  .header
+    &-top
       &__logo
         &-block
           &_text
             display: none
-      &__contacts
-        &-time
-          margin-right: 40px
+  .main
+    flex-direction: column
+    align-items: center
+    &-text
+      &__title, &__subtitle
+        text-align: center
+      &__benefit
+        margin-bottom: 30px
+    &-form
+      &__wrap
+        padding: 30px 40px
+      &__input
+      margin-bottom: 21px
+    .form
+      width: 285px
+      &-radio
+        margin-bottom: 30px
+        span
+          padding: 14px 25px
+      &-btn
+        padding: 25px 65px
+        width: 100%
+
+@media(max-width: 575px)
+  .main
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__benefit
+        max-width: 290px
+        &-item
+          &_text
+            width: 210px
+    &-form
+      &__wrap
+        padding: 20px 12px
+    .form
+      width: 240px
+      &-radio
+        span
+          padding: 14px 10px
+      &-btn
+        padding: 15px 40px
+
+  
+@media(min-width: 768px)
+  .hidden-desctop
+    display: none
+
+
+@media (max-width: 450px)
+  .hidden-450
+    display: none
