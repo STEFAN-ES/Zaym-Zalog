@@ -1,12 +1,15 @@
 body
   font-family: 'Gilroy'
+  background: #fafbfb
 .yellow
   color: #ffcc38
 .bold
   font-weight: 700
-
+.section-title
+  font-size: 20px
+  text-align: center
 .input-text
-  padding: 20px 20px
+  padding: 17px 20px
   background-color: #f8f8f8
   box-shadow: inset 1px 2px 3px rgba(176, 185, 199, 0.31)
   border-radius: 4px
@@ -17,7 +20,17 @@ body
     font-size: 16px
     font-weight: 300
     color: #ffffff
-    background: linear-gradient(to top, #1f65d9 0%, #286fe7 48%, #3982fd 100%)
+    background: $button-color
     border-radius: 4px 4px 8px 8px
     cursor: pointer
-
+      
+    &:active
+      background: $button-color_hover
+      padding: 23px 63px
+      
+input[type="radio"]
+  display: none
+input[type="radio"]:checked + span
+  box-shadow: 0 1px 0 #e9aa01, inset 1px 1px 0 rgba(255, 255, 255, 0.09)   
+  background: linear-gradient(to top, #f6bb00 0%, #ffcc38 49%, #ffda6c 100%)
+  border: 1px solid #f6bb00

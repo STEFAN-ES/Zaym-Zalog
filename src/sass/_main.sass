@@ -2,11 +2,14 @@
   display: flex
   align-items: center
   justify-content: space-between
-  padding-top: 75px
+  padding-top: 70px
+  padding-bottom: 50px
   h1
     font-size: 60px
     font-weight: 700
   &-text
+    &__title
+      margin-bottom: 5px
     &__subtitle
       font-size: 36px
       font-weight: 300
@@ -28,13 +31,17 @@
           margin-right: 15px
         &_text
           font-size: 18px
-          width: 255px
-    
-  &-form
-    padding: 10px
-    background: #ffffff
+          width: 255px     
+  &-form //Обертка инпутов
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 285px
+    &__bg
+      padding: 10px
+      background: #ffffff
     &__wrap
-      padding: 30px 40px
+      padding: 23px 37px
       border: 2px solid #fafbfc
       border-radius: 4px
       display: flex
@@ -47,14 +54,37 @@
       &-title
         font-size: 24px
         font-weight: 700
+        margin-bottom: 8px
       &-subtitle
         font-size: 15px
         font-weight: 300
+    
     &__input
       width: 100%
-      margin-bottom: 21px
+      margin-bottom: 18px
+    &__radio
+      margin-bottom: 28px
+      span
+        display: inline-block
+        padding: 11px 25px
+        width: 49%
+        background: #f8f8f8
+        border: 1px solid #e4e7ea
+        font-size: 12px
+        font-weight: 300
+        position: relative
+        cursor: pointer
+        &.btn-left
+          border-radius: 5px 0 0 5px
+          left: 2px
+        &.btn-right
+          border-radius: 0 5px 5px 0
+          right: 2px
     &__btn
+      width: 99%
       margin-bottom: 25px
+      &:active
+        margin-bottom: 29px
     &__descr
       width: 220px
       color: #8090a7
@@ -63,33 +93,4 @@
       &-link
         color: #2066da
         text-decoration: underline
-    .form
-      display: flex
-      flex-direction: column
-      align-items: center
-      width: 285px
-      &-radio
-        margin-bottom: 30px
-        span
-          display: inline-block
-          padding: 14px 25px
-          width: 49%
-          background: #f8f8f8
-          border: 1px solid #e4e7ea
-          font-size: 12px
-          font-weight: 300
-          position: relative
-          cursor: pointer
-          &.btn-left
-            border-radius: 5px 0 0 5px
-            left: 2px
-          &.btn-right
-            border-radius: 0 5px 5px 0
-            right: 2px
-        input[type="radio"]
-          display: none
-        input[type="radio"]:checked + span
-          box-shadow: 0 1px 0 #e9aa01, inset 1px 1px 0 rgba(255, 255, 255, 0.09)   
-          background: linear-gradient(to top, #f6bb00 0%, #ffcc38 49%, #ffda6c 100%)
-          border: 1px solid #f6bb00
 

@@ -57,7 +57,7 @@
     <div class="main">
       <div class="main-text">
         <div class="main-text__title"><h1>Займ залог</h1></div>
-        <div class="main-text__subtitle">Недвижимости <br>в день обращения</div>
+        <div class="main-text__subtitle">недвижимости <br>в день обращения</div>
         
         <div class="main-text__benefit">
           
@@ -81,7 +81,7 @@
       </div>
       <!-- ./Main-text-END -->
 
-      <div class="main-form">
+      <div class="main-form__bg">
         <div class="main-form__wrap">
           
           <div class="main-form__text">
@@ -89,12 +89,12 @@
             <div class="main-form__text-subtitle">и получите решение по займу в течении 15 минут</div>
           </div>
           <!-- ===Main-form__text END=== -->
-          <form action="#" class="form" method="POST">
+          <form action="#" class="main-form" method="POST">
             <input type="text" name="user_name" class="main-form__input input-text" placeholder="Ваше имя"
                 required>
             <input type="text" name="user_phone" class="main-form__input input-text" placeholder="Ваш телефон"
                 required>
-            <div class="form-radio">
+            <div class="form-radio main-form__radio">
               <label for="avansHours">
                 <input type="radio" name="user_variant" id="avansHours" value="avans" checked><span class="btn-left">Нужен аванс в течении часа</span>
               </label>
@@ -118,6 +118,7 @@
   <!-- ========HEADER-END========= -->
 
 
+  <!-- =========FEATURES========= -->
   <div class="features">
     <div class="container">
       <div class="features-wrap">
@@ -145,7 +146,65 @@
       </div>
     </div>
   </div>
+  <!-- =========FEATURES END========= -->
 
+  <div class="calc">
+    <div class="container">
+      <div class="calc-title section-title"><h2><sapn class="bold">Рассчитайте</sapn><br> ваш ежемесячный платеж</h2></div>
+      <div class="calc-wrap">
+        <!-- Вводимые данные -->
+        <div class="calc-input"></div>
+        <!-- Вывод данных -->
+        <div class="calc-output"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="object">
+    <div class="container">
+      <div class="object-title section-title"><h2><span class="bold">Обьектом залога</span><br> может являться</h2></div>
+      <div class="object-wrap">
+        
+        <div class="object-item">
+          <div class="object-item__img"><img src="img/object/apartment.png" alt=""></div>
+          <div class="object-item__text">Квартира</div>
+        </div>
+        
+        <div class="object-item">
+          <div class="object-item__img"><img src="img/object/house.png" alt=""></div>
+          <div class="object-item__text">Дом</div>
+        </div>
+        
+        <div class="object-item">
+          <div class="object-item__img"><img src="img/object/land_plot.png" alt=""></div>
+          <div class="object-item__text">Земельный участок</div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="docs">
+    <div class="container">
+      <div class="docs-title section-title"><h2>Для оформления залога недвижимости в большинстве случаев достаточно <span class="bold">двух документов</span></h2></div>
+      <div class="docs-wrap">
+        <!-- ===docs-items обертка=== -->
+        <div class="docs-items">
+          <div class="docs-item">
+            <div class="docs-item__img"><img src="img/docs/pas.png" alt=""></div>
+            <div class="docs-item__text">Паспорт</div>
+          </div>
+          
+          <div class="docs-item">
+            <div class="docs-item__img"><img src="img/docs/doc.png" alt=""></div>
+            <div class="docs-item__text">Документ на объект недвижимости</div>
+          </div>
+        </div>
+        <!-- ===docs-items END=== -->
+        <button class="docs-btn form-btn">Отправить заявку на займ</button>
+      </div>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 </body>

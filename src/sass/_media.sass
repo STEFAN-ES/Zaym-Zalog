@@ -12,6 +12,11 @@
       &__subtitle
         font-size: 30px
     &-form
+      width: 250px
+      &__radio
+        margin-bottom: 20px
+        span
+          padding: 10px 15px
       &__wrap
         padding: 25px 20px
       &__input
@@ -19,15 +24,6 @@
         padding: 15px 20px
       &__btn
         margin-bottom: 20px
-    
-    .form
-      width: 250px
-      &-radio
-        margin-bottom: 20px
-        span
-          width: 49%
-          padding: 10px 15px
-      &-btn
         padding: 15px 50px
 
 @media (max-width: 767px)
@@ -39,6 +35,9 @@
         &-block
           &_text
             display: none
+      &__contacts
+        &-time
+          margin-right: 25px
   .main
     flex-direction: column
     align-items: center
@@ -48,21 +47,23 @@
       &__benefit
         margin-bottom: 30px
     &-form
+      width: 285px
       &__wrap
         padding: 30px 40px
       &__input
       margin-bottom: 21px
-    .form
-      width: 285px
-      &-radio
+      &__radio
         margin-bottom: 30px
         span
           padding: 14px 25px
-      &-btn
+      &__btn
         padding: 25px 65px
         width: 100%
 
 @media(max-width: 575px)
+  .header
+    &-top
+      align-items: center
   .main
     &-text
       display: flex
@@ -74,14 +75,13 @@
           &_text
             width: 210px
     &-form
+      width: 240px
       &__wrap
         padding: 20px 12px
-    .form
-      width: 240px
-      &-radio
+      &__radio
         span
           padding: 14px 10px
-      &-btn
+      &__btn
         padding: 15px 40px
 
   
