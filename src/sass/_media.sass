@@ -25,6 +25,13 @@
       &__btn
         margin-bottom: 20px
         padding: 15px 50px
+  
+  .object
+    &-item
+      &:nth-child(2)
+        margin: 0 30px
+      &__img
+        width: 210px
 
 @media (max-width: 767px)
   .hidden-mobile
@@ -59,6 +66,22 @@
       &__btn
         padding: 25px 65px
         width: 100%
+  
+  .features
+    &-item
+      width: 49%
+  
+  .object
+    &-wrap
+      flex-direction: column
+      align-items: center
+    &-item
+      margin-bottom: 30px
+      &:nth-child(2)
+        margin: 0 0 30px 0
+      &__img
+        width: 227px
+        margin-bottom: 15px
 
 @media(max-width: 575px)
   .header
@@ -83,7 +106,16 @@
           padding: 14px 10px
       &__btn
         padding: 15px 40px
-
+  
+  .docs
+    &-item
+      &s
+        flex-direction: column
+        align-items: center
+      &:first-child
+        margin: 0 0 40px 0
+      &__img
+        margin-bottom: 15px
   
 @media(min-width: 768px)
   .hidden-desctop
