@@ -1,0 +1,53 @@
+.example
+  padding-top: 50px
+  padding-bottom: 50px
+  &s
+    display: flex
+    justify-content: center
+  &-bg
+    background: #ffffff
+    padding: 10px
+    &:first-child
+      margin-right: 30px
+  &-wrap
+    display: flex
+    border: 2px solid #fafbfc
+    padding: 30px
+  &-data
+    margin-right: 28px
+    &__item
+      margin-bottom: 7px
+      &-title
+        color: #8090a7
+        font-weight: 300
+        font-size: 12px
+        margin-bottom: 5px
+      &-value
+        font-size: 14px
+        font-weight: 700
+  &-photo
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__img
+      border-radius: 5px
+      overflow: hidden
+      margin-bottom: 43px
+    &__comment
+      width: 211px
+      font-size: 12px
+      position: relative
+      right: -10px
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        top: -8px
+        left: -14px
+        width: 23px
+        height: 21px
+        background: url('../img/example/before-icon.png') center no-repeat
+        z-index: -1
+      
+        
+      
