@@ -488,6 +488,37 @@ input[type="radio"]:checked + span {
         background: url("../img/example/before-icon.png") center no-repeat;
         z-index: -1; }
 
+.partners-title {
+  margin-bottom: 30px; }
+
+.partners-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .partners-slider__item {
+    background: #fff;
+    padding: 10px;
+    margin-right: 20px;
+    min-height: 130px; }
+    .partners-slider__item-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 2px solid #fafbfc;
+      border-radius: 5px;
+      padding: 15px 30px; }
+      .partners-slider__item-wrap-1 {
+        padding: 10px 30px; }
+
 @media (max-width: 991px) {
   .header-top__contacts-time {
     margin-right: 40px; }
@@ -512,7 +543,24 @@ input[type="radio"]:checked + span {
   .object-item:nth-child(2) {
     margin: 0 30px; }
   .object-item__img {
-    width: 210px; } }
+    width: 210px; }
+  .examples {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .example-bg {
+    margin-bottom: 30px; }
+    .example-bg:first-child {
+      margin-right: 0; }
+  .example-photo__img {
+    margin-bottom: 15px; }
+  .example-photo__comment {
+    font-size: 13px;
+    font-weight: 500; } }
 
 @media (max-width: 767px) {
   .hidden-mobile {
@@ -591,6 +639,9 @@ input[type="radio"]:checked + span {
       padding: 14px 10px; }
     .main-form__btn {
       padding: 15px 40px; }
+  .features-item {
+    width: 100%;
+    margin-bottom: 40px; }
   .docs-items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -611,4 +662,14 @@ input[type="radio"]:checked + span {
 @media (max-width: 450px) {
   .hidden-450 {
     display: none; } }
+
+@media (max-width: 500px) {
+  .example-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .example-data {
+    margin-right: 0;
+    margin-bottom: 15px; } }
 /*# sourceMappingURL=style.css.map */
