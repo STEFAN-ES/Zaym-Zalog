@@ -502,7 +502,7 @@ input[type="radio"]:checked + span {
     background: #fff;
     padding: 10px;
     margin-right: 20px;
-    min-height: 130px; }
+    min-height: 135px; }
     .partners-slider__item-wrap {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -516,8 +516,15 @@ input[type="radio"]:checked + span {
       border: 2px solid #fafbfc;
       border-radius: 5px;
       padding: 15px 30px; }
-      .partners-slider__item-wrap-1 {
+      .partners-slider__item-wrap-3 {
         padding: 10px 30px; }
+      .partners-slider__item-wrap-2 {
+        padding: 17px 30px; }
+    .partners-slider__item-arrow__left {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #000000; }
 
 @media (max-width: 991px) {
   .header-top__contacts-time {
