@@ -2,13 +2,13 @@
   &-title
     margin-bottom: 30px
   &-slider
+    position: relative
     display: flex
-    justify-content: center
+    justify-content: space-between
     &__item
       background: #fff
       padding: 10px
-      margin-right: 20px
-      min-height: 135px
+      min-height: 134px
       &-wrap
         display: flex
         justify-content: center
@@ -20,9 +20,15 @@
           padding: 10px 30px
         &-2
           padding: 17px 30px
-      &-arrow
-        &__left
-          width: 15px
-          height: 15px
-          border-radius: 50%
-          background: #000000
+    &__arrow
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background: #000000
+      position: absolute
+      top: 50%
+      &-left
+        left: -50px
+      &-right
+        position: absolute
+        right: -50px
