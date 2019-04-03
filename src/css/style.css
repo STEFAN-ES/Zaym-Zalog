@@ -85,7 +85,7 @@ input[type="radio"]:checked + span {
           box-shadow: 0 1px 0 #e9aa01, inset 1px 1px 0 rgba(255, 255, 255, 0.09);
   background: -webkit-gradient(linear, left bottom, left top, from(#f6bb00), color-stop(49%, #ffcc38), to(#ffda6c));
   background: linear-gradient(to top, #f6bb00 0%, #ffcc38 49%, #ffda6c 100%);
-  border: 1px solid #f6bb00; }
+  border: 1px solid transparent; }
 
 .header {
   padding-top: 35px;
@@ -423,6 +423,118 @@ input[type="radio"]:checked + span {
     padding: 25px 50px;
     width: 310px;
     font-size: 16px; }
+
+.bigform {
+  padding: 50px 0; }
+  .bigform-title {
+    margin-bottom: 60px; }
+  .bigform-wrap {
+    background: #ffffff;
+    padding: 10px; }
+    .bigform-wraps {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .bigform-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #fafbfc;
+    padding: 39px 19px 39px 39px; }
+    .bigform-content__rooms {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .bigform-content__rooms-title {
+        font-size: 14px;
+        margin-bottom: 40px; }
+      .bigform-content__rooms-radio {
+        cursor: pointer;
+        position: relative; }
+        .bigform-content__rooms-radios {
+          height: 40px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          margin-bottom: 20px; }
+        .bigform-content__rooms-radio:nth-child(1) {
+          right: 0; }
+          .bigform-content__rooms-radio:nth-child(1) span {
+            border-radius: 4px 0px 0px 4px; }
+        .bigform-content__rooms-radio:nth-child(2) {
+          right: 1px; }
+        .bigform-content__rooms-radio:nth-child(3) {
+          right: 2px; }
+        .bigform-content__rooms-radio:nth-child(4) {
+          right: 3px; }
+        .bigform-content__rooms-radio:nth-child(5) {
+          right: 4px; }
+          .bigform-content__rooms-radio:nth-child(5) span {
+            border-radius: 0 4px 4px 0; }
+        .bigform-content__rooms-radio span {
+          padding: 15px 17px;
+          background: #f8f8f8;
+          border: 1px solid #e4e7ea; }
+    .bigform-content__input {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 30px; }
+      .bigform-content__input-sqrcity {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-right: 20px; }
+        .bigform-content__input-sqrcity_row {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 20px; }
+          .bigform-content__input-sqrcity_row:last-child {
+            margin-bottom: 0; }
+        .bigform-content__input-sqrcity_sqr {
+          max-width: 80px;
+          margin-right: 10px; }
+        .bigform-content__input-sqrcity_region {
+          width: 150px;
+          cursor: pointer; }
+        .bigform-content__input-sqrcity_city {
+          width: 100%; }
+      .bigform-content__input-contacts {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 375px; }
+        .bigform-content__input-contacts input {
+          margin-bottom: 20px;
+          width: 100%; }
+          .bigform-content__input-contacts input:last-child {
+            margin-bottom: 0; }
 
 .example {
   padding-top: 50px;
