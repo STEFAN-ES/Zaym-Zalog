@@ -9,3 +9,7 @@ $(document).ready(function(){
     nextArrow: '<div class="partners-slider__arrow-right"></div>',
   });
 });
+
+jQuery(function ($) {
+  $(".input-phone").mask("+7(999) 999-99-99");
+});

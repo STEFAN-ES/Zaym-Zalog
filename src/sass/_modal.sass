@@ -1,12 +1,115 @@
 .overlay
-  display: flex
+  display: none
   justify-content: center
   align-items: center
-  background: #b2bcca
-  opacity: 0.8
+  background: rgba(178, 188, 202, 0.8)
   position: fixed
   width: 100vw
   height: 100vh
   top: 0
   z-index: 999
+
+.popup
+  padding: 10px
+  background: #FFFFFF
+  display: none
+  justify-content: center
+  align-items: center
+  position: relative
+  border-radius: 4px
+  &-close
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    box-shadow: 0 3px 21px rgba(222, 225, 228, 0.13)
+    background-color: #ffffff
+    border-radius: 50%
+    cursor: pointer
+    position: absolute
+    top: -20px
+    right: -25px
+  &-wrap
+    padding: 25px 35px
+    display: flex
+    flex-direction: column
+    align-items: center
+    border: 2px solid #fafbfc
+  &-text
+    width: 205px
+    text-align: center
+    margin-bottom: 30px
+    &__title
+      font-size: 24px
+      font-weight: 700
+      margin-bottom: 5px
+    &__subtitle
+      font-size: 15px
+      font-weight: 400
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 285px
+    &__input
+      &s
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+        width: 100%
+      &:first-child
+        margin-bottom: 21px
+    &__radio
+      width: 49%
+      &s
+        display: flex
+        margin-bottom: 30px
+      span
+        display: inline-block
+        padding: 12px 25px
+        background: #f8f8f8
+        border: 1px solid #e4e7ea
+        font-size: 12px
+        font-weight: 300
+        position: relative
+        cursor: pointer
+        &.btn-left
+          left: 1px
+          border-radius: 5px 0 0 5px
+        &.btn-right
+          border-radius: 0 5px 5px 0
+    &__btn
+      padding: 25px 46px
+      margin-bottom: 25px
+      width: 99%
+    &__consent
+      font-size: 10px
+      width: 220px
+      text-align: center
+      a
+        text-decoration: underline
+        color: #0000FF
+  &-thanks
+    display: none
+    padding: 10px
+    background: #fff
+    position: relative
+    &__wrap
+      padding: 30px 60px
+      border: 2px solid #fafbfc
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__title
+      text-align: center
+      font-weight: 700
+      font-size: 24px
+      margin-bottom: 17px
+    &__subtitle
+      text-align: center
+      font-weight: 400
+      font-size: 15px
+      width: 220px
+
 

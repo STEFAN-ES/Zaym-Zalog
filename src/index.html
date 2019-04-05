@@ -47,8 +47,8 @@
         <!-- /.header-top__contacts-time -->
         <div class="header-top__contacts-tel">
           <div class="header-top__contacts-tel_number hidden-mobile"><a href="tel:+79661234567">+7 966 123 45 67</a></div>
-          <div class="header-top__contacts-tel_link hidden-mobile"><a href="">Заказать звонок</a></div>
-          <button class="header-top__contacts-tel_btn hidden-desctop"><img src="img/icon-phone.png" alt=""></button>
+          <div class="header-top__contacts-tel_link hidden-mobile modalCall">Заказать звонок</div>
+          <button class="header-top__contacts-tel_btn hidden-desctop modalCall"><img src="img/icon-phone.png" alt=""></button>
         </div>
       </div>
       <!-- /.header-top__contacts -->
@@ -94,7 +94,7 @@
           <form action="#" class="main-form" method="POST">
             <input type="text" name="user_name" class="main-form__input input-text" placeholder="Ваше имя"
                 required>
-            <input type="text" name="user_phone" class="main-form__input input-text" placeholder="Ваш телефон"
+            <input type="text" name="user_phone" class="main-form__input input-text input-phone" placeholder="Ваш телефон"
                 required>
             <div class="form-radio main-form__radio">
               <label for="avansHours">
@@ -121,10 +121,43 @@
 
   <!-- ======OVERLAY & POPUP====== -->
   <div class="overlay">
-    <div class="popup">
-      <!-- <div class="popup-close"><img src="img/close.png" alt="close"></div> -->
-      
-    </div>
+      <div class="popup">
+        <div class="popup-close"><img src="img/close.png" alt="close"></div>
+        <div class="popup-wrap">
+          <div class="popup-text">
+            <div class="popup-text__title">Заполните форму</div>
+            <div class="popup-text__subtitle"></div>
+          </div>
+          <form action="#" class="popup-form" method="POST">
+            <div class="popup-form__inputs">
+              <input type="text" name="user_name" class="popup-form__input input-text" placeholder="Ваше имя" required>
+              <input type="text" name="user_phone" class="popup-form__input input-text input-phone" placeholder="Ваш телефон" required>
+            </div>
+            
+            <div class="popup-form__radios">
+              <label for="pAdvance" class="popup-form__radio">
+                <input type="radio" name="p_user_variant" id="pAdvance"><span class="btn-left">Нужен аванс в течение часа</span>
+              </label>
+              <label for="pSumm" class="popup-form__radio">
+                <input type="radio" name="p_user_variant" id="pSumm" checked><span class="btn-right">Нужна вся сумма сегодня</span>
+              </label>
+            </div>
+            <button type="submit" class="form-btn popup-form__btn">Оформить займ сейчас</button>
+            <div class="popup-form__consent">
+                Отправляя запрос, вы даете согласие на <a href="#">обработку Ваших персональных данных</a>
+            </div>
+          </form>
+        </div>
+        <!-- /.popup-wrap -->
+      </div>
+
+      <div class="popup-thanks">
+        <div class="popup-close"><img src="img/close.png" alt="close"></div>
+        <div class="popup-thanks__wrap">
+          <div class="popup-thanks__title">Спасибо за заявку!</div>
+          <div class="popup-thanks__subtitle">Наш специалист позвонит вам в течении 15 минут</div>
+        </div>
+      </div>
   </div>
   <!-- ======OVERLAY & POPUP END====== -->
 
@@ -212,7 +245,7 @@
           </div>
         </div>
         <!-- ===docs-items END=== -->
-        <button class="docs-btn form-btn">Отправить заявку на займ</button>
+        <button class="docs-btn form-btn modalCall">Отправить заявку на займ</button>
       </div>
     </div>
   </div>
@@ -253,7 +286,7 @@
             <div class="bigform-content__input">
               <div class="bigform-content__input-sqrcity">
                 <div class="bigform-content__input-sqrcity_row">
-                  <input type="text" name="sqr" id="sqr" class="input-text bigform-content__input-sqrcity_sqr" placeholder="34 м" required>
+                  <input type="text" name="sqr" id="sqr" class="input-text bigform-content__input-sqrcity_sqr" placeholder="34 м&sup2;" required>
                   <select name="" id="" form="bigform" class="input-text bigform-content__input-sqrcity_region">
                     <option value="Москва">Москва</option>
                     <option value="Московская область">Московская область</option>
@@ -265,7 +298,7 @@
               </div>
               <div class="bigform-content__input-contacts">
                 <input type="text" name="" id="" class="input-text bigform-content__input-contacts_adress" placeholder="Введите адрес" required>
-                <input type="text" name="" id="" class="input-text input-phone bigform-content__input-contacts_phone" placeholder="Введите телефон" required>
+                <input type="text" name="" id="" class="input-text input-phone bigform-content__input-contacts_phone input-phone" placeholder="Введите телефон" required>
               </div>
             </div>
             <button type="submit" class="form-btn bigform-btn">Узнать сумму кредита</button>
@@ -441,7 +474,7 @@
         
       </div>
       <!-- ======EXAPMPLES END====== -->
-      <div class="example-btn"><button type="button" class="callback-btn form-btn">Получить свой кредит</button></div>
+      <div class="example-btn"><button type="button" class="callback-btn form-btn modalCall">Получить свой кредит</button></div>
     </div>
   </div>
 
@@ -479,8 +512,8 @@
           <!-- /.footer-top__contacts-time -->
           <div class="footer-top__contacts-tel">
             <div class="footer-top__contacts-tel_number hidden-mobile"><a href="tel:+79661234567">+7 966 123 45 67</a></div>
-            <div class="footer-top__contacts-tel_link hidden-mobile"><a href="">Заказать звонок</a></div>
-            <button class="footer-top__contacts-tel_btn hidden-desctop"><img src="img/icon-phone.png" alt=""></button>
+            <div class="footer-top__contacts-tel_link hidden-mobile modalCall">Заказать звонок</div>
+            <button class="footer-top__contacts-tel_btn hidden-desctop modalCall"><img src="img/icon-phone.png" alt=""></button>
           </div>
         </div>
         <!-- /.footer-top__contacts -->
@@ -496,6 +529,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
   <script src="slick/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
