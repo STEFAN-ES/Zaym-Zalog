@@ -10,7 +10,10 @@
   <link rel='stylesheet' href='css/style.css'>
   <link rel="stylesheet" href="slick/slick.css">
   <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/calc.css">
   <title>ЗаймЗалог - получите деньги быстро</title>
+
+ 
 </head>
 <body>
   <!-- =======================HEADER========================== -->
@@ -92,17 +95,20 @@
           </div>
           <!-- ===Main-form__text END=== -->
           <form action="#" class="main-form" method="POST">
+
+            <input type="hidden" name="formname" value="main-form">
+            
             <input type="text" name="user_name" class="main-form__input input-text" placeholder="Ваше имя"
                 required>
             <input type="text" name="user_phone" class="main-form__input input-text input-phone" placeholder="Ваш телефон"
                 required>
             <div class="form-radio main-form__radio">
               <label for="avansHours">
-                <input type="radio" name="user_variant" id="avansHours" value="avans" checked><span class="btn-left">Нужен аванс в течении часа</span>
+                <input type="radio" name="user_variant" id="avansHours" value="Нужен аванс в течении часа" checked><span class="btn-left">Нужен аванс в течении часа</span>
               </label>
               
               <label for="amountToday">
-                <input type="radio" name="user_variant" id="amountToday" value="summa"><span class="btn-right">Нужна вся сумма сегодня</span>
+                <input type="radio" name="user_variant" id="amountToday" value="Нужна вся сумма сегодня"><span class="btn-right">Нужна вся сумма сегодня</span>
               </label>
             </div>
             <button type="submit" class="form-btn main-form__btn">Получить решение</button>
@@ -129,6 +135,7 @@
             <div class="popup-text__subtitle"></div>
           </div>
           <form action="#" class="popup-form" method="POST">
+            <input type="hidden" name="formname" value="form-modal">
             <div class="popup-form__inputs">
               <input type="text" name="user_name" class="popup-form__input input-text" placeholder="Ваше имя" required>
               <input type="text" name="user_phone" class="popup-form__input input-text input-phone" placeholder="Ваш телефон" required>
@@ -136,10 +143,10 @@
             
             <div class="popup-form__radios">
               <label for="pAdvance" class="popup-form__radio">
-                <input type="radio" name="p_user_variant" id="pAdvance"><span class="btn-left">Нужен аванс в течение часа</span>
+                <input type="radio" name="p_user_variant" id="pAdvance" value="Нужен аванс в течение часа"><span class="btn-left">Нужен аванс в течение часа</span>
               </label>
               <label for="pSumm" class="popup-form__radio">
-                <input type="radio" name="p_user_variant" id="pSumm" checked><span class="btn-right">Нужна вся сумма сегодня</span>
+                <input type="radio" name="p_user_variant" id="pSumm" checked value="Нужна вся сумма сегодня"><span class="btn-right">Нужна вся сумма сегодня</span>
               </label>
             </div>
             <button type="submit" class="form-btn popup-form__btn">Оформить займ сейчас</button>
@@ -195,11 +202,56 @@
   <div class="calc">
     <div class="container">
       <div class="calc-title section-title"><h2><sapn class="bold">Рассчитайте</sapn><br> ваш ежемесячный платеж</h2></div>
-      <div class="calc-wrap">
-        <!-- Вводимые данные -->
-        <div class="calc-input"></div>
-        <!-- Вывод данных -->
-        <div class="calc-output"></div>
+      <div class="flex-wrap">
+      <form action="#" class="calc-form">
+        <input type="hidden" name="formname" value="form-calc">
+        <div class="calc-wrap">
+          <!-- Вводимые данные -->
+          <div class="calc-input__wrap">
+            <h3 class="calc__title">Выберите  сумму и срок займа</h3>
+            <div class="calc-input">
+                <h4 class="calc-input__title">Сумма кредита:  <span class="sumMoney"> 17 млн. руб.</span></h4>
+              <div class="calc-input-elem">             
+                <div id="number-slider" class="calc-slider"></div>
+                <div class="test-question__slider-elem-inp">
+                  <input type="hidden" name="money-result" id="send-result-polzunok"/>
+                </div>
+            
+                <div class="calc-input__min-max">
+                  <div class="calc-input__min-max-item">300 тыс. руб.</div>
+                  <div class="calc-input__min-max-item">30 млн руб.</div>
+                </div>
+              </div>
+            
+            </div>
+        
+            <div class="calc-input">
+                <h4 class="calc-input__title">Срок: <span class="sumYear"> 3 года</span></h4>
+              <div class="calc-input-elem">             
+                <div id="year-slider" class="calc-slider"></div>
+                <div class="test-question__slider-elem-inp">
+                  <input type="hidden" name="year-result" id="send-result-year"/>
+                </div>
+            
+                <div class="calc-input__min-max">
+                  <div class="calc-input__min-max-item">1 год</div>
+                  <div class="calc-input__min-max-item">20 лет</div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+          <!-- Вывод данных -->
+          <div class="calc-output">
+            <h3 class="calc__title">Ваш ежемесячный платеж</h3>
+            <div class="calc-output__val">
+              <span class="calc-output__num">28367</span> <span class="calc-output__small">руб./мес.</span>
+            </div>
+            <button type="button" class="form-btn modalCall calc-btn">Оформить займ сейчас</button>
+          </div>
+        
+        </div>
+      </form>
       </div>
     </div>
   </div>
@@ -257,28 +309,29 @@
         <div class="bigform-wrap">
          <!-- ===FORM=== -->
           <form action="#" class="bigform-content form" method="POST" id="bigform">
+            <input type="hidden" name="formname" value="bigform">
             
             <div class="bigform-content__rooms">
               <div class="bigform-content__rooms-title">Количество комнат</div>
               <div class="bigform-content__rooms-radios">
                 <label for="rooms1" class="bigform-content__rooms-radio" >
-                  <input type="radio" name="rooms" id="rooms1" checked><span>1</span>
+                  <input type="radio" name="rooms" id="rooms1" value="1" checked><span>1</span>
                 </label>
                 
                 <label for="rooms2" class="bigform-content__rooms-radio">
-                  <input type="radio" name="rooms" id="rooms2"><span>2</span>
+                  <input type="radio" name="rooms" id="rooms2" value="2"><span>2</span>
                 </label>
                 
                 <label for="rooms3" class="bigform-content__rooms-radio">
-                  <input type="radio" name="rooms" id="rooms3"><span>3</span>
+                  <input type="radio" name="rooms" id="rooms3" value="3"><span>3</span>
                 </label>
                 
                 <label for="rooms4" class="bigform-content__rooms-radio">
-                  <input type="radio" name="rooms" id="rooms4"><span>4+</span>
+                  <input type="radio" name="rooms" id="rooms4" value="4+"><span>4+</span>
                 </label>
                 
                 <label for="landplot" class="bigform-content__rooms-radio">
-                  <input type="radio" name="rooms" id="landplot"><span>Участок</span>
+                  <input type="radio" name="rooms" id="landplot" value="Участок"><span>Участок</span>
                 </label>
                 
               </div>
@@ -287,7 +340,7 @@
               <div class="bigform-content__input-sqrcity">
                 <div class="bigform-content__input-sqrcity_row">
                   <input type="text" name="sqr" id="sqr" class="input-text bigform-content__input-sqrcity_sqr" placeholder="34 м&sup2;" required>
-                  <select name="" id="" form="bigform" class="input-text bigform-content__input-sqrcity_region">
+                  <select name="" id="" form="bigform" class="input-text bigform-content__input-sqrcity_region" name="town">
                     <option value="Москва">Москва</option>
                     <option value="Московская область">Московская область</option>
                   </select>
@@ -297,8 +350,8 @@
                 </div>
               </div>
               <div class="bigform-content__input-contacts">
-                <input type="text" name="" id="" class="input-text bigform-content__input-contacts_adress" placeholder="Введите адрес" required>
-                <input type="text" name="" id="" class="input-text input-phone bigform-content__input-contacts_phone input-phone" placeholder="Введите телефон" required>
+                <input type="text" name="adres" id="" class="input-text bigform-content__input-contacts_adress" placeholder="Введите адрес" required>
+                <input type="text" name="user_phone" id="" class="input-text input-phone bigform-content__input-contacts_phone input-phone" placeholder="Введите телефон" required>
               </div>
             </div>
             <button type="submit" class="form-btn bigform-btn">Узнать сумму кредита</button>
@@ -337,7 +390,7 @@
   </div>
 
   
-  <!-- <div class="partners">
+  <div class="partners">
     <div class="container">
       <div class="partners-wrap">
         <div class="partners-title"><h2>Наши <b>партнеры</b></h2></div>
@@ -361,11 +414,20 @@
               <div class="partners-slider__item-img"><img src="img/partners/logo3.png" alt=""></div>
             </div>
           </div>
+
+
+          <div class="partners-slider__item">
+            <div class="partners-slider__item-wrap partners-slider__item-wrap-4">
+              <div class="partners-slider__item-img"><img src="img/partners/logo4.png" alt=""></div>
+            </div>
+          </div>
+
+
         
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   
   <div class="example">
     <div class="container">
@@ -528,6 +590,10 @@
  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+  <script src="js/ui/ui.js"></script>
+  <script src="js/ui/jquery.ui.touch-punch.min.js"></script>
+
   <script src="slick/slick.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/plugins.js"></script>
