@@ -1,14 +1,15 @@
 <?php 
 
-$user_name = $_POST['user_name'];
-$user_phone = $_POST['user_phone'];
-$user_variant = $_POST['user_variant'];
+$user_name 			= $_POST['user_name'];
+$user_phone 		= $_POST['user_phone'];
+$user_variant 	= $_POST['user_variant'];
 $p_user_variant = $_POST['p_user_variant'];
 
-$rooms = $_POST['rooms'];
-$city = $_POST['city'];
-$town = $_POST['town'];
-$adres = $_POST['adres'];
+$rooms	= $_POST['rooms'];
+$sqr 		= $_POST['sqr'];
+$city 	= $_POST['city'];
+$town 	= $_POST['town'];
+$adres 	= $_POST['adres'];
 
 // main-form
 
@@ -22,15 +23,15 @@ $mail->CharSet = 'utf-8';
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'form-email@mail.ru';                 // Наш логин
-$mail->Password = '349a689-L';                           // Наш пароль от ящика
+$mail->Username = 'sotnikov.work@yandex.ru';                 // Наш логин
+$mail->Password = 'ppdWorkcdm560pro12';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('form-email@mail.ru', 'Название сайта');   // От кого письмо 
-$mail->addAddress('diman.b95@mail.ru');     // Add a recipient
+$mail->setFrom('sotnikov.work@yandex.ru', 'Название сайта');   // От кого письмо 
+$mail->addAddress('stefanplay1@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -59,8 +60,9 @@ $mail->Body    = '
 	Имя: ' . $user_name . '';
 }else if($_REQUEST['formname'] ==='bigform'){
 	$mail->Body    = '
-	Узнайте сумму одобренного вам кредита: <br> 
+	Пользователь оставил свои даные с расширенной формы: <br> 
 	Количество комнат: ' . $rooms . ' <br> 
+	Площадь:' . $sqr . '<br>
 	Телефон: ' . $user_phone . ' <br> 
 	Адрес: ' . $adres . ' <br> 
 	Город: ' . $city . $town. '';

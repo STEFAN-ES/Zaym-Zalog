@@ -39,6 +39,16 @@
         margin-bottom: 20px
         padding: 15px 50px
   
+  .features
+    &-wrap
+      justify-content: space-around
+    &-item
+      width: 49%
+      margin-bottom: 60px
+      &:nth-child(3)
+        margin-bottom: 0
+      &:nth-child(4)
+        margin-bottom: 0
   .object
     &-item
       &:nth-child(2)
@@ -70,12 +80,20 @@
       &__input
         &-contacts
           width: 370px
+    &-text
+      padding: 0
   .calc
     &-wrap
       padding: 30px 40px
     &-btn
       width: 250px
       padding: 25px 30px
+  
+  .footer
+    &-top
+      &__contacts
+        &-time
+          margin-right: 40px
 
 @media (max-width: 767px)
   .hidden-mobile
@@ -140,6 +158,10 @@
             width: 108px
         &-contacts
           width: 250px
+    &-text
+      &__title
+        text-align: center
+        padding-right: 15px
   .calc
     &-wrap
       flex-direction: column
@@ -176,7 +198,19 @@
   .features
     &-item
       width: 100%
+      margin-bottom: 60px
+      &:nth-child(3)
+        margin-bottom: 60px
+  
+  .calc
+    &-title
       margin-bottom: 40px
+    &-wrap
+      padding: 25px 20px
+    &-input
+      &__wrap
+        width: 100%
+  
   
   .docs
     &-item
@@ -187,6 +221,29 @@
         margin: 0 0 40px 0
       &__img
         margin-bottom: 15px
+    &-btn
+      width: 270px
+      padding: 25px 30px
+  
+  .bigform
+    &-content
+      padding: 20px 15px 15px 15px
+      &__input
+        flex-direction: column
+        max-width: 100%
+        &-sqrcity
+          margin-right: 0
+          width: 100%
+          margin-bottom: 20px
+          &_sqr
+            max-width: 90px
+          &_region
+            width: 147px
+        &-contacts
+          max-width: 100%
+    &-btn
+      max-width: 99%
+      padding: 25px 35px
   .popup
     &-wrap
       padding: 20px
@@ -208,6 +265,31 @@
 @media (max-width: 450px)
   .hidden-450
     display: none
+  .calc
+    &-form
+      max-width: 290px
+    &-wrap
+      padding: 25px 15px
+    &-input
+      &__wrap
+        width: 230px
+    &-btn
+      width: 200px
+      padding: 20px 12px
+  .bigform
+    &-wrap
+      max-width: 290px
+    &-content
+      &__rooms
+        &-radio
+          span
+            padding: 11px 15px
+      &__input
+        &-sqrcity
+          &_sqr
+            max-width: 80px
+          &_region
+            max-width: 143px
 
   
 @media (max-width: 500px)

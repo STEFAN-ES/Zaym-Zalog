@@ -5,6 +5,7 @@ var popup       = document.querySelector('.popup');
 var thanks      = document.querySelector('.popup-thanks')
 var pSubtitle   = document.querySelector('.popup-text__subtitle');
 var pTxt        = document.createTextNode('и оформите свой займ в течении 15 минут');
+var sTxt        = document.createTextNode('и узнайте сумму одобенного кредита в течении 15 минут');
 
 function modal(){
   overlay.style.display = 'flex';
@@ -12,14 +13,27 @@ function modal(){
   thanks.style.display  = 'none';
   pSubtitle.appendChild(pTxt);
 };
+function Smodal(){
+  overlay.style.display = 'flex';
+  popup.style.display   = 'block';
+  thanks.style.display  = 'none';
+  pSubtitle.appendChild(sTxt);
+};
 
 function modalclose(){
   overlay.style.display = 'none';
   popup.style.display   = 'none';
 };
 
+function thank(){
+  popup.style.display   = 'none';
+  overlay.style.display = 'flex';
+  thanks.style.display  = 'flex';
+};
+
 closemodal.on('click', modalclose);
 callModal.on('click', modal);
+$('.modalCalls').on('click', Smodal)
 
 
 
@@ -117,7 +131,8 @@ $('.partners-slider').slick({
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false
       }
     }
   ]
@@ -145,11 +160,13 @@ $('form').submit(function(event) {
                 $(".overlay").fadeOut();
                 $('html').addClass('stop');
                 $("#download-start").fadeIn();
+                thank();
 
-              }else if(formThis.find('input[type="hidden"]').val() === "gagerModal"){
+              }else if(formThis.find('input[type="hidden"]').val() === "form-modal"){
                 $(".overlay").fadeOut();
                 $('html').addClass('stop');
                 $("#modal-thanks").fadeIn();
+                thank();
               }
 
               $('form').trigger('reset');
@@ -162,3 +179,5 @@ $('form').submit(function(event) {
           }
       });
   });
+
+  $(".input-phone").mask("9 (999) 999-99-99");
