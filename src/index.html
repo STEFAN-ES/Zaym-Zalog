@@ -4,21 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Stefan Sotnikov">
   <meta name="keywords" content="займ денег залог занять денег быстро залог недвижимости займ по паспорту узнать сумму кредита платеж расчет платежа">
-  <meta>
+  <meta name="description" content="Оформление займа за 15 минут. &#9830; Заполните форму и мы сразу перезвоним вам. &#9830; Узнайте сумму одобреннгого вам кредита онлайн">
+  <meta name="descroption" content="Формление займов без поручителей и третьих лиц. &#9830; Кредитная история не важна. &#9830; Заполните форму, и мы вам перезвоним">
+  <meta property="og:site_name" content="ЗаймЗалог">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Быстрое формление займов без поручителей и третьих лиц">
+  <meta property="og:descroption" content="Получите свой займ под залог недвижимости. Быстро и в день обращения. Рассмотрение заявки в течении 15 минут. Расчитайте сумму ежемесячных платежей онлайн">
+  <meta property="og:image" content="http://zalog-zaym.ru/img/moneys.jpg">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="150">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel='stylesheet' href='css/fonts.css'>
   <link rel="stylesheet" href="slick/slick.css">
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/calc.css">
   <link rel='stylesheet' href='css/style.css'>
-  <title>ЗаймЗалог - получите деньги быстро</title>
+
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(53237287, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/53237287" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+  <title>ЗаймЗалог - мгновенное оформление займа</title>
 
  
 </head>
 <body>
   <!-- =======================HEADER========================== -->
-   <div class="header">
+   <header class="header">
     <div class="container">
       <!-- ========Header-TOP========= -->
       <div class="header-top">
@@ -50,8 +62,8 @@
         </div>
         <!-- /.header-top__contacts-time -->
         <div class="header-top__contacts-tel">
-          <div class="header-top__contacts-tel_number"><a href="tel:+79661234567">+7 966 123 45 67</a></div>
-          <div class="header-top__contacts-tel_link modalCall">Заказать звонок</div>
+          <div class="header-top__contacts-tel_number"><a href="tel:+79168735896">+7 916 873 58 96</a></div>
+          <div class="header-top__contacts-tel_link modalCall" onclick="ym(53237287, 'reachGoal', 'modalCall'); return true;">Заказать звонок</div>
         </div>
       </div>
       <!-- /.header-top__contacts -->
@@ -94,7 +106,7 @@
             <div class="main-form__text-subtitle">и получите решение по займу в течении 15 минут</div>
           </div>
           <!-- ===Main-form__text END=== -->
-          <form action="#" class="main-form" method="POST">
+          <form action="mailer/smart.php" class="main-form" method="POST" onsubmit="ym(53237287, 'reachGoal', 'formSubmit'); return true;">
 
             <input type="hidden" name="formname" value="main-form">
             
@@ -122,7 +134,7 @@
     <!-- ======MAIN END======= -->
     </div>
     <!-- /.container -->
-  </div>
+  </header>
   <!-- ========HEADER-END========= -->
 
   <!-- ======OVERLAY & POPUP====== -->
@@ -134,7 +146,7 @@
             <div class="popup-text__title">Заполните форму</div>
             <div class="popup-text__subtitle"></div>
           </div>
-          <form action="#" class="popup-form" method="POST">
+          <form action="mailer/smart.php" class="popup-form" method="POST" onsubmit="ym(53237287, 'reachGoal', 'formSubmit'); return true;">
             <input type="hidden" name="formname" value="form-modal">
             <div class="popup-form__inputs">
               <input type="text" name="user_name" class="popup-form__input input-text" placeholder="Ваше имя" required>
@@ -247,7 +259,7 @@
             <div class="calc-output__val">
               <span class="calc-output__num">28367</span> <span class="calc-output__small">руб./мес.</span>
             </div>
-            <button type="button" class="form-btn modalCalls calc-btn">Оформить займ сейчас</button>
+            <button type="button" class="form-btn modalCalls calc-btn" onclick="ym(53237287, 'reachGoal', 'modalCall'); return true;">Оформить займ сейчас</button>
           </div>
         
         </div>
@@ -297,7 +309,7 @@
           </div>
         </div>
         <!-- ===docs-items END=== -->
-        <button class="docs-btn form-btn modalCall">Отправить заявку на займ</button>
+        <button class="docs-btn form-btn modalCall" onclick="ym(53237287, 'reachGoal', 'modalCall'); return true;">Отправить заявку на займ</button>
       </div>
     </div>
   </div>
@@ -308,7 +320,7 @@
       <div class="bigform-wraps">
         <div class="bigform-wrap">
          <!-- ===FORM=== -->
-          <form action="#" class="bigform-content form" method="POST" id="bigform">
+          <form action="mailer/smart.php" class="bigform-content form" method="POST" id="bigform" onsubmit="ym(53237287, 'reachGoal', 'bigformSubmit'); return true;">
             <input type="hidden" name="formname" value="bigform">
             
             <div class="bigform-content__rooms">
@@ -536,7 +548,7 @@
         
       </div>
       <!-- ======EXAPMPLES END====== -->
-      <div class="example-btn"><button type="button" class="callback-btn form-btn modalCall">Получить свой кредит</button></div>
+      <div class="example-btn"><button type="button" class="callback-btn form-btn modalCall" onclick="ym(53237287, 'reachGoal', 'modalCall'); return true;">Получить свой кредит</button></div>
     </div>
   </div>
 
@@ -573,8 +585,8 @@
           </div>
           <!-- /.footer-top__contacts-time -->
           <div class="footer-top__contacts-tel">
-            <div class="footer-top__contacts-tel_number"><a href="tel:+79661234567">+7 966 123 45 67</a></div>
-            <div class="footer-top__contacts-tel_link modalCall">Заказать звонок</div>
+            <div class="footer-top__contacts-tel_number"><a href="tel:+79168735896">+7 916 873 58 96</a></div>
+            <div class="footer-top__contacts-tel_link modalCall" onclick="ym(53237287, 'reachGoal', 'modalCall'); return true;">Заказать звонок</div>
           </div>
         </div>
         <!-- /.footer-top__contacts -->

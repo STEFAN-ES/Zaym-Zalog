@@ -59,6 +59,8 @@
     &s
       flex-direction: column
       align-items: center
+    &-title
+      margin-bottom: 50px
     &-bg
       margin-bottom: 30px
       &:first-child
@@ -82,6 +84,8 @@
           width: 370px
     &-text
       padding: 0
+      &__items
+        margin-bottom: 0
   .calc
     &-wrap
       padding: 30px 40px
@@ -354,3 +358,9 @@
     left: -10px
   .slick-next
     right: -10px
+
+@media (min-width: 992px) and (max-width: 1200px)
+  .example
+    &-data
+      min-width: 130px
+      margin-right: 25px
