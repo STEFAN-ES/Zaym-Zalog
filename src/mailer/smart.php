@@ -8,7 +8,7 @@ $p_user_variant = $_POST['p_user_variant'];
 $rooms	= $_POST['rooms'];
 $sqr 		= $_POST['sqr'];
 $city 	= $_POST['city'];
-$town 	= $_POST['town'];
+$region 	= $_POST['region'];
 $adres 	= $_POST['adres'];
 
 // main-form
@@ -25,12 +25,12 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'sotnikov.work@yandex.ru';                 // Наш логин
-$mail->Password = 'ppdWorkcdm560pro12';                           // Наш пароль от ящика
+$mail->Username = 'form-email@yandex.ru';                 // Наш логин
+$mail->Password = 'gpdcallBack500';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('sotnikov.work@yandex.ru', 'Название сайта');   // От кого письмо 
+$mail->setFrom('form-email@yandex.ru', 'ЗаймЗалог');   // От кого письмо 
 $mail->addAddress('stefanplay1@gmail.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -62,10 +62,10 @@ $mail->Body    = '
 	$mail->Body    = '
 	Пользователь оставил свои даные с расширенной формы: <br> 
 	Количество комнат: ' . $rooms . ' <br> 
-	Площадь:' . $sqr . '<br>
+	Площадь:' . $sqr . 'м&sup2;<br>
 	Телефон: ' . $user_phone . ' <br> 
-	Адрес: ' . $adres . ' <br> 
-	Город: ' . $city . $town. '';
+	Адрес: ' . $adres . ' <br>
+	Город: ' . $city . $region. '';
 }
 $mail->AltBody = '';
 

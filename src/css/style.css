@@ -26,6 +26,9 @@
           box-sizing: border-box;
   outline: none; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   margin: 0; }
 
@@ -790,7 +793,7 @@ input[type="radio"]:checked + span {
       background: #fff;
       padding: 10px;
       margin: 0 10px;
-      min-height: 135px; }
+      height: 135px !important; }
       .partners-slider__item-wrap {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -803,13 +806,8 @@ input[type="radio"]:checked + span {
                 align-items: center;
         border: 2px solid #fafbfc;
         border-radius: 5px;
-        padding: 15px 30px; }
-        .partners-slider__item-wrap-3 {
-          padding: 10px 30px; }
-        .partners-slider__item-wrap-2 {
-          padding: 20.5px 30px; }
-        .partners-slider__item-wrap-4 {
-          padding: 20.5px; }
+        padding: 15px;
+        height: 100%; }
       .partners-slider__item-arrow__left {
         width: 15px;
         height: 15px;
@@ -817,7 +815,14 @@ input[type="radio"]:checked + span {
         background: #000000; }
   .partners img {
     max-width: 100%;
-    max-height: 100%; }
+    max-height: 100%;
+    height: auto; }
+
+.slick-dots li button:before {
+  color: #286fe7; }
+
+.slick-dots li.slick-active button:before {
+  color: #1f65d9; }
 
 .footer {
   padding-top: 35px;
@@ -1294,8 +1299,6 @@ input[type="radio"]:checked + span {
     display: none; } }
 
 @media (max-width: 450px) {
-  .hidden-450 {
-    display: none; }
   .calc-form {
     max-width: 290px; }
   .calc-wrap {
@@ -1314,6 +1317,10 @@ input[type="radio"]:checked + span {
   .bigform-content__input-sqrcity_region {
     max-width: 143px; } }
 
+@media (max-width: 465px) {
+  .hidden-465 {
+    display: none; } }
+
 @media (max-width: 500px) {
   .example-wrap {
     -webkit-box-orient: vertical;
@@ -1322,5 +1329,44 @@ input[type="radio"]:checked + span {
             flex-direction: column; }
   .example-data {
     margin-right: 0;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .footer-top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .footer-top__contacts-time_hours {
+      font-size: 12px; }
+    .footer-top__contacts-tel_number {
+      font-size: 14px; }
+  .header-top {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header-top__contacts-time_hours {
+      font-size: 12px; }
+    .header-top__contacts-tel_number {
+      font-size: 14px; } }
+
+@media (max-width: 370px) {
+  .popup-close {
+    right: -15px;
+    top: -15px; } }
+
+@media (max-width: 350px) {
+  .footer-top__logo-text {
+    font-size: 20px; }
+    .footer-top__logo-text_subtitle {
+      font-size: 14px; }
+  .header-top__logo-text {
+    font-size: 20px; }
+    .header-top__logo-text_subtitle {
+      font-size: 14px; } }
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  .partners-slider {
+    padding: 0px 30px; }
+  .slick-prev {
+    left: -10px; }
+  .slick-next {
+    right: -10px; } }
 /*# sourceMappingURL=style.css.map */

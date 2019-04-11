@@ -12,20 +12,15 @@
       background: #fff
       padding: 10px
       margin: 0 10px
-      min-height: 135px
+      height: 135px !important 
       &-wrap
         display: flex
         justify-content: center
         align-items: center
         border: 2px solid #fafbfc
         border-radius: 5px
-        padding: 15px 30px
-        &-3
-          padding: 10px 30px
-        &-2
-          padding: 20.5px 30px
-        &-4
-          padding: 20.5px
+        padding: 15px
+        height: 100%
       &-arrow
         &__left
           width: 15px
@@ -35,3 +30,9 @@
   img
     max-width: 100%
     max-height: 100%
+    height: auto
+
+.slick-dots li button:before
+  color: #286fe7
+.slick-dots li.slick-active button:before
+  color: #1f65d9

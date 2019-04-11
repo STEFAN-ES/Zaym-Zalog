@@ -23,6 +23,7 @@ function Smodal(){
 function modalclose(){
   overlay.style.display = 'none';
   popup.style.display   = 'none';
+  $('.popup-text__subtitle').empty();
 };
 
 function thank(){
@@ -124,7 +125,10 @@ $('.partners-slider').slick({
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        arrows: false,
+        autoplay: true,
+        dots: true
       }
     },
     {
@@ -132,7 +136,9 @@ $('.partners-slider').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
+        autoplay: true,
+        dots: true
       }
     }
   ]
@@ -153,25 +159,9 @@ $('form').submit(function(event) {
           url: action,
           data: msg,
           success: function(data) {
-
-
-              if(formThis.find('input[type="hidden"]').val() === "main-form" ){
-
-                $(".overlay").fadeOut();
-                $('html').addClass('stop');
-                $("#download-start").fadeIn();
-                thank();
-
-              }else if(formThis.find('input[type="hidden"]').val() === "form-modal"){
-                $(".overlay").fadeOut();
-                $('html').addClass('stop');
-                $("#modal-thanks").fadeIn();
-                thank();
-              }
+              thank();
 
               $('form').trigger('reset');
-
-
           },
           error: function(xhr, str) {
 
